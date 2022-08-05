@@ -7,23 +7,20 @@ extra_cheese = input("Do you want extra cheese? Y or N ")
 
 #Write your code below this line 👇
 cost = 0
-if(size=='S'):
+if size=='S' :
     cost += 15
-    if(add_pepperoni=='Y'):
+    if add_pepperoni=='Y':
         cost += 2
-    if(extra_cheese=='Y'):
-        cost += 1
-elif(size=='M'):
+elif size=='M' :
     cost += 20
-    if(add_pepperoni=='Y'):
+    if add_pepperoni=='Y':
         cost += 3
-    if(extra_cheese=='Y'):
-        cost += 1
-elif(size=='L'):
+elif size=='L' :
     cost += 25
-    if(add_pepperoni=='Y'):
+    if add_pepperoni=='Y':
         cost += 3
-    if(extra_cheese=='Y'):
-        cost += 1         
+        
+if extra_cheese=='Y' :
+    cost += 1         
 
-print("Your final bill is: $"+str(cost)+".")
+print(f"Your final bill is: ${cost}.")
