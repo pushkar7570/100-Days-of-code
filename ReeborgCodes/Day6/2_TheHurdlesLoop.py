@@ -13,9 +13,5 @@ def move_oneBlock():
     move()
     turn_left()
     
-move_oneBlock()
-move_oneBlock()
-move_oneBlock()
-move_oneBlock()
-move_oneBlock()
-move_oneBlock()
+for x in range(0,6):
+    move_oneBlock()
