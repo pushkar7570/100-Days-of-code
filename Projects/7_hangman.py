@@ -55,6 +55,7 @@ stages = ['''
       |
 =========
 ''']
+
 word_list = ["hangman", "mehul", "pushkar", "rajeev", "capture", "island", "shiv", "jai", "shree", "ram"]
 word = random.choice(word_list)
 word_len = len(word)
@@ -66,15 +67,13 @@ for x in word:
 print(blank_word)  
 
 lives = 6
-guessed_list = []
 
 while '_' in blank_word and lives >= 0:
     bool = 1
     letter = input("Guess the letter: ").lower()
-    guessed_list.append(letter)
     
-    if guessed_list.count(letter) > 1:
-        print("You already guessed the letter. Try another!!")
+    if letter in blank_word:
+        print("You have already guessed this letter. Try another!!")
         continue
         
     for pos in range(word_len):
