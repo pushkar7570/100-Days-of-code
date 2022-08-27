@@ -2,15 +2,14 @@
 import math
 def prime_checker(number):
     flag = True
-    for x in range(2,number):
+    rounded_root_of_number = math.ceil(math.sqrt(number))
+    for x in range(2, rounded_root_of_number):
         if number % x == 0:
             flag = False
     if flag is True:
         print("It's a prime number.")
     else:
         print("It's not a prime number.")    
-
-
 
 
 
